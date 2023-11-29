@@ -1,20 +1,17 @@
+import Entity from "../../@shared/entity/entity.abstract";
 import Address from "../value-object/address";
 
-export default class Customer {
-  private _id: string;
+export default class Customer extends Entity {
   private _name: string;
   private _address!: Address;
   private _active: boolean = false;
   private _rewardsPoints: number = 0;
 
   constructor(id: string, name: string) {
+    super();
     this._id = id;
     this._name = name;
     this.validate();
-  }
-
-  get id(): string {
-    return this._id;
   }
 
   get name(): string {
