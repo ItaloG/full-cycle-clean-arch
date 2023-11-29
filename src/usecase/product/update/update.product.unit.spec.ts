@@ -54,6 +54,6 @@ describe("Unit test for product update use case", () => {
       price: -100,
     };
 
-    await expect(() => productUpdateUseCase.execute(input)).rejects.toThrow("product: Price must be grater than zero");
+    await expect(() => productUpdateUseCase.execute(input)).rejects.toThrow("product: price must be greater than 0");
   });
 });

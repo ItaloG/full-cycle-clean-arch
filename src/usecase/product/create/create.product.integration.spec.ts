@@ -54,6 +54,6 @@ describe("Test create product use case", () => {
       type: "a",
     };
 
-    await expect(() => usecase.execute(input)).rejects.toThrow("Price must be grater than zero");
+    await expect(() => usecase.execute(input)).rejects.toThrow("product: price must be greater than 0");
   });
 });
